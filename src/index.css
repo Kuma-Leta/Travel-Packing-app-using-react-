@@ -1,13 +1,93 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.packetsContainer {
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(56, 20, 12);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  color: white;
+  column-gap: 1rem;
+}
+@media screen and(min-width: 600px) {
+  .packetsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: aqua;
+    width: 100%;
+  }
+}
+.logo {
+  background-color: rgb(255, 196, 0);
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 2rem;
+}
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background-color: rgb(255, 140, 0);
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.btn {
+  width: 4rem;
+  background-color: rgb(0, 128, 90);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+input {
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.packetManager {
+  min-height: 10vh;
+  background-color: rgb(34, 3, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.packetSummary {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 238, 255);
+}
+.packetsContainer .packet {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  display: flow-root;
+}
+.packetsContainer .strike {
+  text-decoration: line-through;
+  list-style-type: none;
 }
